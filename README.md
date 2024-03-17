@@ -1,2 +1,3 @@
-# Testes
-Repositório para testar e treinar minhas habilidades com HTML, CSS e JS!
+Meu portfolio pessoal!
+
+Irei atualizando conforme eu aprenda novas habilidades em HTML, CSS e JS.
