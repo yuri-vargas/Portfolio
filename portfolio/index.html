@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaQuery.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portfolio | Yuri</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+            <section id="logo">
+                <h1>Yuri<span class="cor1"> Vargas</span></h1>
+            </section>
+
+            <div class="menu-toggle" onclick="toggleMenu()">⇣</div>
+
+            <nav id="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre">Sobre mim</a>
+                <a href="#skills">Skills</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+    </header>
+    <main>
+        <section data-aos="fade-up"  class="tela" id="inicio">
+            <h1>Olá, eu sou o <span class="destaque">Yuri</span>.</h1>
+            <h2>Dev <span class="destaque">Front-end</span> em processo de <span class="destaque">aprendizado</span>!</h2>
+            <p><br><br>Atualmente estou com 3 meses de estudo e um conhecimento solido em HTML e CSS!<br>Comecei o JS em 17/09/2023</p>
+        </section>
+
+        <section class="tela" id="sobre">
+            <h2 data-aos="fade-up" id="sobreh2" class="destaque">Sobre mim</h2>
+            <h3 data-aos="fade-up" class="cor1">Dev. Front-end <span class="cor2">web</span></h3>
+            <div data-aos="fade-up" class="container">
+                <p>Apaixonado por tecnologia desde criança, com 22 anos me interessei por programação e comecei a estudar Python.<br><br>Porém, gostava de ver resultados na pratica, larguei o back-end e comecei a estudar front-end!<br><br></bre>Estudei bastante HTML 5 e CSS 3, agora estou indo para o JavaScript, para poder então estudar React e Angular.<br><br>Quanto mais estudo, mais fico fascinado por esse mundo de códigos.</p>
+                <img id="fotoDePerfil" src="imagens/imgPerfil2.jpeg" alt="foto De Perfil">
+            </div>
+        </section>
+
+        <section class="tela" id="skills">
+            <h2 data-aos="fade-up" class="destaque">Habilidades</h2>
+            <p data-aos="fade-up">O que eu sei <span class="cor2">até agora</span></p>
+                <div id="imgSkills">
+                    <img src="imagens/html5logo.png" alt="Logo HTML5" title="HTML 5">
+                    <img src="imagens/css3logo.png" alt="Logo CSS3" title="CSS3">
+                    <img src="imagens/jsLogo.png" alt="Logo JavaScript" title="Java Script">
+                    <img src="imagens/githubLogo.png" alt="Logo GitHub" title="GitHub"><br>
+                    <img src="imagens/gitLogo.png" alt="Logo Git" title="Git">
+                    <img src="imagens/responLogo.png" alt="Logo Responsividade" title="Responsividade">
+                    <img src="imagens/seoLogo.png" alt="Logo SEO" title="SEO">
+                    <img src="imagens/acessLogo.png" alt="Logo Acessibilidade" title="Acessibilidade">
+                </div>
+        </section>
+
+        <section id="projetos">
+            <h1 class="destaque">Meus projetos</h1>
+             <div class="paiTodos">
+                 <div class="paiProjetos">
+                        <h3>Checkpoint Zone</h3>
+                         <a href="https://y0ur3.github.io/ProjetoCheckpoint/" target="_blank">
+                             <div class="checkpoint"></div>
+                         </a>
+                         <p>Um site de noticias de jogos.<br>Projeto pessoal simples que fiz quando estava começando a estudar HTML e CSS.</p>
+                 </div>
+                 <div class="paiProjetos">
+                    <h3>Tela de Login</h3>
+                    <a href="https://y0ur3.github.io/ProjetoLogin/" target="_blank">
+                        <div class="login"></div>
+                    </a>
+                    <p>Uma tela de login simples, que fiz também quando estava aprendendo HTML e CSS.</p>
+                 </div>
+                 <div class="paiProjetos">
+                    <h3>Projeto Cordel</h3>
+                    <a href="https://y0ur3.github.io/ProjetoCordel/" target="_blank">
+                        <div class="cordel"></div>
+                    </a>
+                    <p>Um projeto simples com efeito paralax nas imagens.</p>
+                 </div>
+                 <div class="paiProjetos">
+                    <h3>Projeto Social</h3>
+                    <a href="https://y0ur3.github.io/ProjetoSocial/" target="_blank">
+                        <div class="social"></div>
+                    </a>
+                    <p>Um site que simula um smartphone usando iframes.</p>
+                 </div>
+             </div>
+        </section>
+        
+        <section class="tela" id="contato">
+            <h2 data-aos="fade-up" class="destaque">Contato</h2>
+            <form action="" id="formulario" autocomplete="off" method="post">
+                <label data-aos="fade-up" for="inome">Nome:
+                    <input data-aos="fade-up" type="text" name="nome" id="inome" placeholder="Seu nome completo :D" required autocomplete="off">
+                </label>
+                <label data-aos="fade-up" for="iemail">Email:
+                    <input data-aos="fade-up" type="email" name="email" id="iemail" placeholder="Seu email" required autocomplete="off">
+                </label>
+                <label data-aos="fade-up" for="iassun">Assunto:
+                    <textarea data-aos="fade-up" name="assunto" id="iassun" cols="10" rows="5" placeholder="O que deseja?" autocomplete="off"></textarea>
+                </label>
+                <label for="ienviar">
+                    <a href="obrigado.html">
+                        <input type="button" id="ienviar" value="Enviar">
+                    </a>
+                </label>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="destaque">Minhas redes socias:</p>
+        <section id="redes">
+            <a href="https://github.com/Y0UR3" target="_blank"><img src="imagens/githubLogo.png" alt="Link do meu GitHub"></a>
+            <a href="https://www.facebook.com/yuri.daniel.14/" target="_blank"><img src="imagens/fbLogo.png" alt="Link do meu Facebook"></a>
+            <a href="https://www.instagram.com/youre.png/" target="_blank"><img src="imagens/instaLogo.png" alt="Link do meu Instagram"></a>
+        </section>
+        <p class="marca"><br><br>feito por Zer0</p>
+    </footer>
+    <script src="Scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

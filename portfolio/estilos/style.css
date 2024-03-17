@@ -1,0 +1,574 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+                                    /*MOBILE FIRST*/
+/*
+    Cores:
+cinza: #1C2326
+vermelho forte: #591515
+vermelho fraco: #D92938
+vermelho medio: #A61414
+vermelho neon: #D91A1A
+*/
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body{
+    background-color: #0D0D0D;
+}
+
+/* Começo do header */
+
+header{
+    background-color: #1C2326;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1{
+    color: #D92938;
+    text-align: right;
+    margin: 5px;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+}
+.cor1{
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+}
+header a{ 
+    display: block;
+    font-size: 1.3em;
+    margin: 8px;
+    color: #D92938;
+    text-align: center;
+    text-decoration: wavy;
+}
+
+header a:hover{
+    background-image: linear-gradient(to right, #d91a1a70, #1c23266e);
+    border-radius: 25%;
+    text-decoration: line-through;
+    color: black;
+}
+
+.menu-toggle{ /*Configurações do menu*/
+    text-align: center;
+    font-size: 1.4em;
+    color: white;
+}
+
+.menu-toggle:hover{
+    cursor: pointer;
+    background-color: #D92938;
+    border-radius: 10px;
+    color: #1C2326;
+}
+
+/*Fim do Header*/
+/*Começo do Main*/
+.tela{
+    height: 100vh;
+}
+/*Tela inicial*/
+#inicio{
+    background-image: linear-gradient(to bottom, #0D0D0D, #1C2326);
+    /*background-image: url(../imagens/fundo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom, left;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#inicio h1{
+    font-size: 2.4em;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    color: #D92938;
+    border-right: 4px solid;
+    width: 14ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digitando 2s steps(15), piscada 0.5s infinite step-end alternate;
+}
+@keyframes digitando{
+    from{
+        width: 0;
+    }
+}
+
+@keyframes piscada{
+    50%{
+        border-color: transparent;
+
+    }
+}
+
+.destaque{
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    color: #1C2326;
+    background-image: linear-gradient(to right, #7a2525, #D91A1A);
+}
+
+#inicio h2{
+    color: #D92938;
+    text-align: center;
+}
+
+#inicio p{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(128, 128, 128, 0);
+}
+/*Fim da tela inicial*/
+
+
+/*Começo do sobre*/
+#sobre{
+
+    background-image: linear-gradient(to bottom, #1C2326, #0D0D0D);
+}
+
+#sobreh2{
+    display: inline;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+#sobre h2{
+    font-size: 2em;
+    margin: 20px;
+}
+#sobre h3{
+    margin: 20px;
+    color: white;
+}
+.cor2{
+    color: #D91A1A;
+}
+#sobre p{
+    text-align: left;
+    color: white;
+    width: 400px;
+    padding: 30px;
+}
+
+#fotoDePerfil{
+    display: none;
+    height: 250px;
+    margin: 30px;
+    padding: 5px;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 1px outset #D91A1A;
+    border-left: none;
+    border-right: none;
+    transition: transform .3s ease;
+}
+
+#fotoDePerfil:hover{
+    transform: scale(1.4);
+}
+/*Fim do sobre*/
+
+/*Começo das Habilidades*/ 
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #0D0D0D,rgb(68, 68, 68));
+  /*  background-image: linear-gradient(to bottom, #0D0D0D, #1C2326);*/
+}
+
+#skills h2{
+    font-size: 2em;
+    margin: 20px;
+}
+#skills p{
+    color: white;
+    text-align: left;
+    padding: 30px;
+}
+
+#imgSkills img{
+    height: 70px;
+    margin: 10px;
+    padding: 10px;
+    opacity: 40%;
+    filter: saturate(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#imgSkills img:hover{
+    background-color: #1C2326;
+    opacity: 100%;
+    filter: saturate(1);
+    border-radius: 10%;
+    transform: scale(1.5);
+}
+/*Fim das Habilidades*/
+
+/*Começo dos Projetos*/
+#projetos{
+    background-image: linear-gradient(to bottom, rgb(68, 68, 68), #1C2326);
+    text-align: right;
+}
+.paiProjetos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px outset #D91A1A;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.paiProjetos h3{
+    color: white;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.paiProjetos p{
+    color: white;
+    margin: 10px;
+    text-align: center;
+    width: 350px;
+    height: 50px;
+}
+
+.checkpoint{
+    background-image: url(../imagens/projetoCheckpoint.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+
+    transition: transform .3s ease;
+}
+
+.checkpoint:hover{
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+.login{
+    background-image: url(../imagens/projetoLogin.png);
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    transition: transform .3s ease;
+}
+
+.login:hover{
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+.cordel{
+    background-image: url(../imagens/projetoCordel.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    transition: transform .3s ease;
+}
+
+.cordel:hover{
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+.social{
+    background-image: url(../imagens/projetoSocial.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    transition: transform .3s ease;
+}
+
+.social:hover{
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+#projetos > h1{
+    padding: 10px;
+    display: inline-block;
+    
+}
+
+.imgProjetos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.imgProjetos .containerCheckpoint{
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    background-image: url(../imagens/projetoCheckpoint.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.473);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.imgProjetos .containerCheckpoint:hover{
+    background-color: #0D0D0D;
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+.imgProjetos > div > p{
+    background-color: #1c232688;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.imgProjetos .containerLogin{
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.473);
+    background-image: url(../imagens/projetoLogin.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerLogin:hover{
+    background-color: #0D0D0D;
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+.imgProjetos .containerSocial{
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.473);
+    background-image: url(../imagens/projetoSocial.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgProjetos .containerSocial:hover{
+    background-color: #0D0D0D;
+    filter: saturate(0);
+    transform: scale(.9);
+}
+.imgProjetos .containerCordel{
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.473);
+    background-image: url(../imagens/projetoCordel.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgProjetos .containerCordel:hover{
+    background-color: #0D0D0D;
+    filter: saturate(0);
+    transform: scale(.9);
+}
+
+/*Fim dos projetos*/
+
+/*Começo do contatos*/
+
+#contato{
+    background-image: linear-gradient(to bottom, rgb(68, 68, 68), #1C2326);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#contato h2{
+    font-size: 2em;
+    margin: 20px;
+}
+
+#inome, #iemail, #iassun{
+    display: block;
+    padding: 5px;
+    margin: 20px;
+}
+
+label{
+    color: white;
+    margin: 20px;
+    
+}
+
+#contato input[type= "text"]{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid  #e63645;
+    outline: none;
+
+    width: 300px;
+    height: 40px;
+
+    background-color: #1c232600;
+    color: #e63645;
+}
+
+#contato input[type= "text"]:hover{
+    border-bottom: 2px solid #D91A1A;
+    background-color: #36393a;
+}
+
+#contato input[type= "email"]{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid  #e63645;
+    outline: none;
+
+    width: 300px;
+    height: 40px;
+
+    background-color: #1c232600;
+    color: #D91A1A;
+}
+
+#contato input[type= "email"]:hover{
+    background-color: #36393a;
+    border-bottom: 2px solid #D91A1A;
+}
+
+textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid  #e63645;
+    outline: none;
+
+    width: 300px;
+    height: 100px;
+
+    background-color: #1c232600;
+    color: #D91A1A;
+}
+
+textarea:hover{
+    background-color: #36393a;
+    border-bottom: 2px solid #D91A1A;
+}
+
+#ienviar{
+    background-color: #e63645;
+    color: #1C2326;
+    font-family: 'Space Grotesk';
+    text-align: center;
+    font-size: 1.1em;
+    width: 100px;
+    height: 50px;
+    border-radius: 20%;
+    outline: none;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+#ienviar:hover{
+    background-color: #D91A1A;
+    cursor: pointer;
+    transform: scale(.9);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 30px #36393a inset !important;
+    /* Altere o valor do box-shadow conforme necessário */
+    color: inherit !important;
+}
+/*Fim do contato*/
+
+/*Começo do footer*/
+footer{
+    color: #1C2326;
+    height: 150px;
+    background-color: #1a1a1a;
+}
+footer p {
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 1.2em;
+}
+#redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#redes img{
+    margin: 10px;
+    height: 40px;
+    filter: saturate(0);
+}
+
+#redes img:hover{
+    background-color: #D92938;
+    border-radius: 30%;
+    filter: saturate(1);
+}
+
+.marca{
+    font-size: 1em;
+    color: #2e2e2e;
+}
